@@ -77,99 +77,7 @@ function _is_git_dirty
 end
 ## end of sashimi ##
 
-# Custom functions
-
-## git utils
-function gc
-    git add .
-    git commit -m "$argv"
-end
-
-function gp
-    git add .
-    git commit -m "$argv"
-    git push
-end
-
-function crepo
-    if test (count $argv) -eq 0
-        echo "enter the repository name"
-        return
-    end
-
-    if test -d "$argv[1]"
-        echo "directory $argv[1] already exists"
-        return
-    end
-
-    if test "$argv[2]" = "pub"
-        gh repo create $argv[1] --public
-    else
-        gh repo create $argv[1] --private
-    end
-
-    mkdir $argv[1]
-    cd $argv[1]
-    git init
-    git remote add origin git@github.com:uttamkn/$argv[1].git
-end
-
-function drepo
-    if test (count $argv) -eq 0
-        echo "enter the repository name"
-        return
-    end
-
-    if not test -d "$argv[1]"
-        echo "directory $argv[1] does not exist"
-        return
-    end
-
-    if test "$argv[1]" = "/"
-        echo "nah"
-        return
-    end
-
-    gh repo delete $argv[1]
-    sudo rm -rf $argv[1]
-end
-
-
-## venv setup
-function svenv
-    set VENV_DIR ".venv"
-    set REQUIREMENTS_FILE "requirements.txt"
-
-    if test (count $argv) -gt 0
-        set VENV_DIR "$argv[1]"
-    end
-
-    if test (count $argv) -gt 1
-        set REQUIREMENTS_FILE "$argv[2]"
-    end
-
-    if test -d "$VENV_DIR"
-        echo "Removing existing virtual environment..."
-        rm -rf "$VENV_DIR"
-    else if test -d ".venv"
-        rm -rf .venv
-    end
-
-    echo "Creating a new virtual environment using python3 -m venv..."
-    python3 -m venv "$VENV_DIR"
-
-    source "$VENV_DIR/bin/activate.fish"
-
-    if test -f "$REQUIREMENTS_FILE"
-        echo "Installing requirements from $REQUIREMENTS_FILE..."
-        pip install -r "$REQUIREMENTS_FILE"
-    else
-        echo "$REQUIREMENTS_FILE not found. Skipping installation of requirements."
-    end
-
-    echo "Setup complete."
-end
-
+# Functions
 
 ## for !! and !$ 
 function __history_previous_command
@@ -193,34 +101,6 @@ end
 
 bind ! __history_previous_command
 bind '$' __history_previous_command_arguments
-
-
-# unzip
-function _is-clean-zip --argument zipfile
-    set summary (zip -sf $zipfile | string split0)
-    set first_file (echo $summary | row 2 | string trim)
-    set first_file_last_char (echo $first_file | string sub --start=-1)
-    set n_files (echo $summary | awk NF | tail -1 | coln 2)
-    test $n_files = 1 && test $first_file_last_char = /
-end
-
-function uzip --argument zipfile
-    if not test (echo $zipfile | string sub --start=-4) = .zip
-        echo (status function): argument must be a zipfile
-        return 1
-    end
-
-    if _is-clean-zip $zipfile
-        unzip $zipfile
-    else
-        set folder_name (echo $zipfile | string split '.zip')[1]
-        set target (basename $folder_name)
-        mkdir $target || return 1
-        unzip $zipfile -d $target
-    end
-end
-
-
 
 # Alias
 
