@@ -228,7 +228,7 @@ end
 alias ...='cd ../..'
 alias la='ls -a'
 alias vim='nvim'
-alias cls='clear; fastfetch'
+alias cls='clear; fastfetch; echo " "'
 alias vate='source .venv/bin/activate'
 alias c='code'
 
@@ -250,4 +250,5 @@ end
 
 # fastfetch on start looks cool
 fastfetch
+echo " "
 

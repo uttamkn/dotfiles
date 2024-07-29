@@ -19,7 +19,7 @@
 #: heavy. Setting them manually is useful for font families that have
 #: many weight variants like Book, Medium, Thick, etc. For example::
 
-font_family      Fira Code Nerd Font 
+font_family      Hack Nerd Font Mono 
 #:     bold_font        Operator Mono Medium
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
@@ -2243,3 +2243,9 @@ map ctrl+cmd+,   load_config_file
 map ctrl+. new_window_with_cwd
 
 
+
+
+# BEGIN_KITTY_THEME
+# 3024 Night
+include current-theme.conf
+# END_KITTY_THEME
