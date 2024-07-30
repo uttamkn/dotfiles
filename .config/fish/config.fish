@@ -112,6 +112,7 @@ alias vim='nvim'
 alias cls='clear; fastfetch; echo " "'
 alias vate='source .venv/bin/activate'
 alias c='code'
+alias icat='kitten icat'
 
 ## config
 alias efrc='vim ~/.config/fish/config.fish'
