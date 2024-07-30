@@ -80,8 +80,8 @@
         "escape": true,
         "exec-on-event": true,
         "interval": 60,
-        "exec": "~/.config/hypr/scripts/hypridle.sh status",
-        "on-click": "~/.config/hypr/scripts/hypridle.sh toggle",
+        "exec": "sh ~/dotfiles-arch/.config/waybar/hypridle.sh status",
+        "on-click": "sh ~/dotfiles-arch/.config/waybar/hypridle.sh toggle",
         "on-click-right": "hyprlock"
     },
 
