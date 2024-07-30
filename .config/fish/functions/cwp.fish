@@ -4,4 +4,5 @@ function cwp
     wal -i $wallpaper
     killall swaybg
     hyprctl hyprpaper wallpaper "HDMI-A-1, /home/utmkn/Pictures/Wallpapers/$wallpaper"
+    sh ~/.config/waybar/launch.sh
 end
