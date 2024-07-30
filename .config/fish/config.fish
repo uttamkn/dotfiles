@@ -106,7 +106,8 @@ bind '$' __history_previous_command_arguments
 
 ## misc
 alias ...='cd ../..'
-alias la='ls -a'
+alias ls='lsd -Fl'
+alias la='lsd -Fla'
 alias vim='nvim'
 alias cls='clear; fastfetch; echo " "'
 alias vate='source .venv/bin/activate'
