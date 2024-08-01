@@ -108,12 +108,17 @@ bind '$' __history_previous_command_arguments
 alias ...='cd ../..'
 alias ls='lsd -Fl'
 alias la='lsd -Fla'
-alias vim='nvim'
-alias nv='nvim'
 alias cls='clear; fastfetch; echo " "'
 alias vate='source .venv/bin/activate'
 alias c='code'
 alias icat='kitten icat'
+
+## editors
+alias vim='nvim'
+alias nv='nvim'
+
+## fuzzy finder
+alias ff='nvim (fzf)'
 
 ## config
 alias efrc='vim ~/.config/fish/config.fish'
@@ -123,8 +128,6 @@ alias ehypr='vim ~/.config/hypr/hyprland.conf'
 alias gs 'git status'
 alias ga 'git add'
 # gc and gp are defined above #
-
-
 
 #Autojump
 if test -s /home/utmkn/.autojump/etc/profile.d/autojump.fish
