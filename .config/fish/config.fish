@@ -110,7 +110,7 @@ alias ls='lsd -Fl'
 alias la='lsd -Fla'
 alias cls='clear; fastfetch; echo " "'
 alias vate='source .venv/bin/activate'
-alias c='code'
+alias c='zeditor'
 alias icat='kitten icat'
 alias cat='bat'
 
