@@ -19,4 +19,5 @@ require("lazy").setup({ { import = "utmkn.plugins" }, { import = "utmkn.plugins.
 	change_detection = {
 		notify = false,
 	},
+	concurrency = 5,
 })
