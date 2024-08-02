@@ -112,6 +112,7 @@ alias cls='clear; fastfetch; echo " "'
 alias vate='source .venv/bin/activate'
 alias c='code'
 alias icat='kitten icat'
+alias cat='bat'
 
 ## editors
 alias vim='nvim'
