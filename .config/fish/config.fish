@@ -119,7 +119,8 @@ alias vim='nvim'
 alias nv='nvim'
 
 ## fuzzy finder
-alias ff='nvim (fzf)'
+alias ff='nvim (fzf --preview "bat --color=always --style=header,grid --line-range :500 {}")'
+alias fp='zathura (fzf --query ".pdf"  --preview "bat --color=always --style=header,grid --line-range :500 {}")'
 
 ## config
 alias efrc='vim ~/.config/fish/config.fish'
