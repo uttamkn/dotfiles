@@ -93,10 +93,6 @@ return {
 						"typescriptreact",
 						"javascriptreact",
 						"css",
-						"sass",
-						"scss",
-						"less",
-						"svelte",
 					},
 				})
 			end,
