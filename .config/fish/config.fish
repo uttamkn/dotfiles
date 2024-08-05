@@ -114,13 +114,14 @@ alias c='zeditor'
 alias icat='kitten icat'
 alias cat='bat'
 
+## fuzzy finder
+alias fp='nohup zathura (fzf --query ".pdf") &'
+alias fd='nohup zaread (fzf --query "notes .docx") &'
+alias ff='nohup zathura (fzf) &'
+
 ## editors
 alias vim='nvim'
 alias nv='nvim'
-
-## fuzzy finder
-alias ff='nvim (fzf --preview "bat --color=always --style=header,grid --line-range :500 {}")'
-alias fp='zathura (fzf --query ".pdf"  --preview "bat --color=always --style=header,grid --line-range :500 {}")'
 
 ## config
 alias efrc='vim ~/.config/fish/config.fish'
