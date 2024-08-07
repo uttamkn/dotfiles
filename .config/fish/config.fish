@@ -113,6 +113,7 @@ alias vate='source .venv/bin/activate'
 alias c='zeditor'
 alias icat='kitten icat'
 alias cat='bat'
+alias im='imv-wayland'
 
 ## fuzzy finder
 alias fp='nohup zathura (fzf --query ".pdf") &'
