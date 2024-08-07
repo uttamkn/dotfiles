@@ -24,6 +24,7 @@ return {
 			ensure_installed = {
 				"tsserver",
 				"clangd",
+				"jdtls",
 				"html",
 				"cssls",
 				"tailwindcss",
@@ -38,6 +39,7 @@ return {
 			ensure_installed = {
 				"prettier",
 				"clang-format",
+				"google-java-format",
 				"stylua",
 				"isort",
 				"black",
