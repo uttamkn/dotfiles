@@ -116,9 +116,9 @@ alias cat='bat'
 alias im='imv-wayland'
 
 ## fuzzy finder
-alias fp='nohup zathura (fzf --query ".pdf") &'
-alias fd='nohup zaread (fzf --query "notes .docx") &'
-alias ff='nohup zathura (fzf) &'
+alias fp='nohup zathura (fzf --query ".pdf") > /dev/null 2>&1 &'
+alias fd='nohup zaread (fzf --query "notes .docx") > /dev/null 2>&1 &'
+alias ff='nohup nvim (fzf) > /dev/null 2>&1 &'
 
 ## editors
 alias vim='nvim'
