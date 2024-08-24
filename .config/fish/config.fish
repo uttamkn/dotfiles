@@ -108,7 +108,7 @@ bind '$' __history_previous_command_arguments
 alias ...='cd ../..'
 alias ls='lsd -Fl'
 alias la='lsd -Fla'
-alias cls='clear; fastfetch; echo " "'
+alias cls='clear'
 alias vate='source .venv/bin/activate'
 alias c='zeditor'
 alias icat='kitten icat'
@@ -139,6 +139,6 @@ if test -s /home/utmkn/.autojump/etc/profile.d/autojump.fish
 end
 
 # fastfetch on start looks cool
-fastfetch
-echo " "
+# fastfetch
+# echo " "
 
