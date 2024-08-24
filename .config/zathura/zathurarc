@@ -1,1 +1,6 @@
 set selection-clipboard clipboard
+map p print
+map d scroll half-down
+map u scroll half-up
+map D toggle_page_mode
+map i recolor
