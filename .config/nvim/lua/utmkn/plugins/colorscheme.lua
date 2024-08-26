@@ -1,5 +1,3 @@
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 return {
 	{
 		"folke/tokyonight.nvim",
@@ -43,8 +41,29 @@ return {
 				end,
 			})
 			vim.cmd([[colorscheme tokyonight]])
-			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+			-- Set the background to transparent
+			local hl_groups = {
+				"Normal",
+				"NormalNC",
+				"NonText",
+				"LineNr",
+				"SignColumn",
+				"VertSplit",
+				"NvimTreeNormal",
+				"NvimTreeNormalNC",
+				"TelescopeNormal",
+				"TelescopeBorder",
+				"TelescopePromptNormal",
+				"TelescopePromptBorder",
+				"TelescopeResultsNormal",
+				"TelescopeResultsBorder",
+				"TelescopePreviewNormal",
+				"TelescopePreviewBorder",
+			}
+			for _, group in ipairs(hl_groups) do
+				vim.api.nvim_set_hl(0, group, { bg = "NONE" })
+			end
 		end,
 	},
 }

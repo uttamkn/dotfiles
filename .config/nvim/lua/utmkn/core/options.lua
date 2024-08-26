@@ -15,7 +15,6 @@ opt.wrap = false
 -- undo settings
 opt.swapfile = false
 opt.backup = false
-opt.undodir = vim.loop.os_getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 
 -- search settings
@@ -28,7 +27,6 @@ opt.smartcase = true
 opt.cursorline = true
 
 -- color scheme things
-opt.termguicolors = true
 opt.signcolumn = "yes"
 
 -- backspace
