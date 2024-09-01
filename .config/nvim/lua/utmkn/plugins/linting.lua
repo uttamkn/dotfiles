@@ -14,9 +14,16 @@ return {
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
-		local eslint = lint.linters.eslint_d
+		-- ignore eslint config file not found error
+		lint.linters.eslint_d = require("lint.util").wrap(lint.linters.eslint_d, function(diagnostic)
+			if diagnostic.message:find("Error: Could not find config file") then
+				---@diagnostic disable-next-line: return-type-mismatch
+				return nil
+			end
+			return diagnostic
+		end)
 
-		eslint.args = {
+		lint.linters.eslint_d.args = {
 			"--no-warn-ignored",
 			"--format",
 			"json",
