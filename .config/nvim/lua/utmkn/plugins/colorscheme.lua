@@ -43,26 +43,42 @@ return {
 			vim.cmd([[colorscheme tokyonight]])
 
 			-- Set the background to transparent
-			local hl_groups = {
-				"Normal",
-				"NormalNC",
-				"NonText",
-				"LineNr",
-				"SignColumn",
-				"VertSplit",
-				"NvimTreeNormal",
-				"NvimTreeNormalNC",
-				"TelescopeNormal",
-				"TelescopeBorder",
-				"TelescopePromptNormal",
-				"TelescopePromptBorder",
-				"TelescopeResultsNormal",
-				"TelescopeResultsBorder",
-				"TelescopePreviewNormal",
-				"TelescopePreviewBorder",
-			}
-			for _, group in ipairs(hl_groups) do
-				vim.api.nvim_set_hl(0, group, { bg = "NONE" })
+			-- local hl_groups = {
+			-- 	"Normal",
+			-- 	"NormalNC",
+			-- 	"NonText",
+			-- 	"LineNr",
+			-- 	"SignColumn",
+			-- 	"VertSplit",
+			-- 	"NvimTreeNormal",
+			-- 	"NvimCmpNormal",
+			-- 	"NvimTreeNormalNC",
+			-- 	"TelescopeNormal",
+			-- 	"TelescopeBorder",
+			-- 	"TelescopePromptNormal",
+			-- 	"TelescopePromptBorder",
+			-- 	"TelescopeResultsNormal",
+			-- 	"TelescopeResultsBorder",
+			-- 	"TelescopePreviewNormal",
+			-- 	"Pmenu",
+			-- 	"PmenuSel",
+			-- 	"PmenuSbar",
+			-- 	"PmenuThumb",
+			-- }
+			-- for _, group in ipairs(hl_groups) do
+			-- 	vim.api.nvim_set_hl(0, group, { bg = "NONE" })
+			-- end
+
+			local hl_groups = vim.api.nvim_get_hl(0, {})
+			for group_name, _ in pairs(hl_groups) do
+				if
+					group_name:match("Normal")
+					or group_name:match("Trouble")
+					or group_name:match("Telescope")
+					or group_name:match("Pmenu")
+				then
+					vim.api.nvim_set_hl(0, group_name, { bg = "NONE" })
+				end
 			end
 		end,
 	},
