@@ -114,6 +114,7 @@ alias c='zeditor'
 alias icat='kitten icat'
 alias cat='bat'
 alias im='imv-wayland'
+alias clean='sudo pacman -Rns $(pacman -Qtdq)'
 
 ## fuzzy finder
 alias fp='nohup zathura (fzf --query ".pdf") > /dev/null 2>&1 &'
