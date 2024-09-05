@@ -22,6 +22,7 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
+				"tsserver",
 				"clangd",
 				"jdtls",
 				"html",
@@ -32,6 +33,24 @@ return {
 				"prismals",
 				"pyright",
 			},
+		})
+
+		-- tsserver is deprecated but mason-lspconfig doesn't support ts_ls yet
+		mason_lspconfig.setup_handlers({
+			-- Will be called for each installed server that doesn't have
+			-- a dedicated handler.
+			--
+			function(server_name) -- default handler (optional)
+				-- https://github.com/neovim/nvim-lspconfig/pull/3232
+				if server_name == "tsserver" then
+					server_name = "ts_ls"
+				end
+				local capabilities = require("cmp_nvim_lsp").default_capabilities()
+				require("lspconfig")[server_name].setup({
+
+					capabilities = capabilities,
+				})
+			end,
 		})
 
 		mason_tool_installer.setup({
