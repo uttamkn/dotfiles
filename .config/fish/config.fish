@@ -1,3 +1,7 @@
+if test -s /home/utmkn/.config/fish/custom-aliases.fish
+   source /home/utmkn/.config/fish/custom-aliases.fish
+end
+
 if status is-interactive
   set fish_greeting
 end
