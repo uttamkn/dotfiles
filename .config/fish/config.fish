@@ -121,8 +121,8 @@ alias im='imv-wayland'
 alias clean='sudo pacman -Rns $(pacman -Qtdq)'
 
 ## fuzzy finder
-alias fp='nohup zathura (fzf --query ".pdf") > /dev/null 2>&1 &'
-alias fd='nohup zaread (fzf --query "notes .docx") > /dev/null 2>&1 &'
+alias fp='zathura --fork (fzf --query ".pdf")'
+alias fd='zaread --fork (fzf --query "notes .docx")'
 alias ff='nohup nvim (fzf) > /dev/null 2>&1 &'
 
 ## editors

@@ -19,11 +19,13 @@ function al
 
   # if -b flag is passed, run the command in the background
   if test "$argv[3]" = "-b"
-    echo "alias $argv[1]='nohup $argv[2]' > /dev/null 2>&1 &" >> ~/.config/fish/custom-aliases.fish
+    echo "alias $argv[1]='nohup $argv[2] > /dev/null 2>&1 &'" >> ~/.config/fish/custom-aliases.fish
     return
   end
 
   echo "alias $argv[1]='$argv[2]'" >> ~/.config/fish/custom-aliases.fish
+
+  source ~/.config/fish/custom-aliases.fish
 end
 
 # Usage: al <alias> <command> to create a new alias
