@@ -29,6 +29,7 @@ return {
 				"cssls",
 				"tailwindcss",
 				"lua_ls",
+				"rust_analyzer",
 				"emmet_ls",
 				"prismals",
 				"pyright",
