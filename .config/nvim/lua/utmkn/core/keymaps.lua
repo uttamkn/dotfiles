@@ -29,3 +29,10 @@ keymap.set("t", "<C-j>", "<C-\\><C-n><C-W>j", { desc = "down" })
 keymap.set("t", "<C-k>", "<C-\\><C-n><C-W>k", { desc = "up" })
 keymap.set("t", "<C-h>", "<C-\\><C-n><C-W>h", { desc = "left" })
 keymap.set("t", "<C-l>", "<C-\\><C-n><C-W>l", { desc = "right" })
+
+-- Copy to clipboard
+keymap.set("v", "<leader>y", '"+y', { desc = "Copy to clipboard" })
+keymap.set("n", "<leader>yy", '"+yy', { desc = "Copy to clipboard" })
+
+-- Paste from clipboard
+keymap.set("n", "<leader>p", '"+p', { desc = "Paste from clipboard" })
