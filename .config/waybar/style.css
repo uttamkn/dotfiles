@@ -1,0 +1,243 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+@define-color backgroundlight @foreground;
+@define-color backgrounddark @background;
+@define-color workspacesbackground1 @foreground;
+@define-color workspacesbackground2 @background;
+@define-color bordercolor @color1;
+@define-color textcolor1 @color2;
+@define-color textcolor2 @color3; /* current text color */
+@define-color textcolor3 @color4;
+@define-color iconcolor @cursor;
+
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+
+* {
+  font-family: "Fira Sans semibold", FontAwesome, Roboto, Helvetica, Arial,
+    sans-serif;
+  border: none;
+  border-radius: 0px;
+  font-size: 12px;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 0px solid #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+#workspaces {
+  border-radius: 15px;
+  border: 0px;
+  font-weight: bold;
+  font-style: normal;
+  opacity: 0.8;
+  font-size: 12px;
+  color: @textcolor1;
+}
+
+#workspaces button {
+  padding-top: 3px;
+  margin: 4px 3px;
+  border-radius: 20px;
+  border: 0px;
+  color: @textcolor1;
+  background-color: @workspacesbackground2;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.4;
+}
+
+#workspaces button.active {
+  color: @textcolor1;
+  background: @workspacesbackground2;
+  border-radius: 30px;
+  min-width: 30px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#workspaces button:hover {
+  color: @textcolor1;
+  background: @workspacesbackground2;
+  border-radius: 15px;
+  opacity: 0.7;
+}
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+
+#window {
+  margin: 0px 10px 0px 0px;
+  border-radius: 12px;
+  color: @textcolor;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+/* -----------------------------------------------------
+ * Custom Quicklinks
+ * ----------------------------------------------------- */
+
+#custom-calculator,
+#custom-hypridle,
+#custom-notification {
+  margin-right: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  color: @textcolor2;
+}
+
+#custom-hypridle {
+  margin-right: 16px;
+}
+
+#custom-hypridle.active {
+  color: @iconcolor;
+}
+
+#custom-hypridle.notactive {
+  color: #dc2f2f;
+}
+
+/* -----------------------------------------------------
+ * Custom Modules
+ * ----------------------------------------------------- */
+
+#custom-appmenuicon {
+  font-size: 20px;
+  color: @textcolor2;
+  margin: 0px 15px 0px 10px;
+}
+
+/* -----------------------------------------------------
+ * Custom Updates
+ * ----------------------------------------------------- */
+
+#custom-updates {
+  font-size: 12px;
+  color: @textcolor2;
+  border-radius: 15px;
+  margin: 0px 15px 0px 0px;
+}
+
+#custom-updates.green {
+}
+
+#custom-updates.yellow {
+  color: #ff9a3c;
+}
+
+#custom-updates.red {
+  color: #dc2f2f;
+}
+
+#battery {
+  font-size: 12px;
+  color: @textcolor2;
+  border-radius: 15px;
+  margin: 0px 15px 0px 0px;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @textcolor2;
+  background-color: @backgroundlight;
+}
+
+@keyframes blink {
+  to {
+    color: @textcolor2;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: @textcolor3;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+
+#clock {
+  font-size: 12px;
+  color: @textcolor2;
+  margin: 0px 15px 0px 0px;
+}
+
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+  font-size: 12px;
+  color: @textcolor2;
+  border-radius: 15px;
+  margin: 0px 15px 0px 0px;
+}
+
+#pulseaudio.muted {
+  color: @textcolor3;
+}
+
+/* -----------------------------------------------------
+ * Network
+ * ----------------------------------------------------- */
+
+#network {
+  font-size: 12px;
+  color: @textcolor2;
+  border-radius: 15px;
+  margin: 0px 15px 0px 0px;
+}
+
+#network.wifi {
+  color: @textcolor2;
+}
+
+/* -----------------------------------------------------
+ * Bluetooth
+ * ----------------------------------------------------- */
+
+#bluetooth,
+#bluetooth.on,
+#bluetooth.connected {
+  font-size: 12px;
+  color: @textcolor2;
+  border-radius: 15px;
+  margin: 10px 15px 10px 0px;
+}
+
+#bluetooth.off {
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+}

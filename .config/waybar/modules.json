@@ -1,0 +1,168 @@
+{
+  // Workspaces
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  // Taskbar
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": ["kitty"],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal"
+    }
+  },
+
+  // Hyprland Window
+  "hyprland/window": {
+    "rewrite": {
+      "(.*) - Brave": "$1",
+      "(.*) - Chromium": "$1",
+      "(.*) - Firefox": "$1"
+    },
+    "separate-outputs": true
+  },
+
+  // Empty
+  "custom/empty": {
+    "format": ""
+  },
+
+  // Updates Count
+  "custom/updates": {
+    "format": "   {}",
+    "escape": true,
+    "return-type": "json",
+    "exec": "sh ~/dotfiles-arch/.config/waybar/updates.sh",
+    "restart-interval": 60
+  },
+
+  // Calculator
+  "custom/calculator": {
+    "format": "",
+    "on-click": "qalculate-gtk",
+    "tooltip-format": "Open calculator"
+  },
+
+  // Rofi Application Launcher
+  "custom/appmenuicon": {
+    "format": "",
+    "on-click": "rofi -show drun -replace"
+  },
+
+  // Hypridle inhibitor
+  "custom/hypridle": {
+    "format": "",
+    "return-type": "json",
+    "escape": true,
+    "exec-on-event": true,
+    "interval": 60,
+    "exec": "sh ~/dotfiles-arch/.config/waybar/hypridle.sh status",
+    "on-click": "sh ~/dotfiles-arch/.config/waybar/hypridle.sh toggle",
+    "on-click-right": "hyprlock"
+  },
+
+  // Clock
+  "clock": {
+    "format": "{:%H:%M %a}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+
+  // Network
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "   {signalStrength}%",
+    "format-ethernet": "  {ifname}",
+    "format-disconnected": "Disconnected",
+    "tooltip-format": " {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "nm-connection-editor"
+  },
+
+  // Pulseaudio
+  "pulseaudio": {
+    "format": "{icon}   {volume}%",
+    "format-bluetooth": "{volume}%  {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "default": [" ", " ", " "]
+    },
+    "on-click": "pavucontrol-qt"
+  },
+
+  // Bluetooth
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "",
+    "format-off": "",
+    "interval": 30,
+    "on-click": "blueman-manager",
+    "format-no-controller": ""
+  },
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [" ", " ", " ", " ", " "]
+  },
+  // Swaync
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{} {icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "",
+      "dnd-notification": " ",
+      "dnd-none": "󰂛",
+      "inhibited-notification": " ",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": " ",
+      "dnd-inhibited-none": " "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+    "escape": true
+  }
+}

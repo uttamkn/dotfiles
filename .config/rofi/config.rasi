@@ -1,0 +1,34 @@
+@import "~/.cache/wal/colors-rofi-dark"
+
+* {
+  font:"Fira Code 9";
+}
+
+element-text {
+background-color: inherit;
+text-color: inherit;
+}
+
+window { 
+transparency: "real";
+border-radius: 10px;
+}
+
+
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: "Q";
+}
+
+
+listview {
+    columns: 1;
+    lines: 7;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: false;
+    scrollbar: false;
+    border: 0px solid;
+}
+
