@@ -1,7 +1,7 @@
 @import "~/.cache/wal/colors-rofi-dark"
 
 * {
-  font:"Fira Code 9";
+  font:"Fira Code 12";
 }
 
 element-text {
