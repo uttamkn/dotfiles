@@ -19,7 +19,7 @@
     sans-serif;
   border: none;
   border-radius: 0px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 window#waybar {
@@ -39,7 +39,7 @@ window#waybar {
   font-weight: bold;
   font-style: normal;
   opacity: 0.8;
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor1;
 }
 
@@ -78,7 +78,7 @@ window#waybar {
   margin: 0px 10px 0px 0px;
   border-radius: 12px;
   color: @textcolor;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
 }
 
@@ -106,7 +106,7 @@ window#waybar.empty #window {
 #custom-hypridle,
 #custom-notification {
   margin-right: 16px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   color: @textcolor2;
 }
@@ -128,7 +128,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-appmenuicon {
-  font-size: 20px;
+  font-size: 22px;
   color: @textcolor2;
   margin: 0px 15px 0px 10px;
 }
@@ -138,7 +138,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor2;
   border-radius: 15px;
   margin: 0px 15px 0px 0px;
@@ -156,7 +156,7 @@ window#waybar.empty #window {
 }
 
 #battery {
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor2;
   border-radius: 15px;
   margin: 0px 15px 0px 0px;
@@ -187,7 +187,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor2;
   margin: 0px 15px 0px 0px;
 }
@@ -197,7 +197,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor2;
   border-radius: 15px;
   margin: 0px 15px 0px 0px;
@@ -212,7 +212,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor2;
   border-radius: 15px;
   margin: 0px 15px 0px 0px;
@@ -229,7 +229,7 @@ window#waybar.empty #window {
 #bluetooth,
 #bluetooth.on,
 #bluetooth.connected {
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor2;
   border-radius: 15px;
   margin: 10px 15px 10px 0px;
