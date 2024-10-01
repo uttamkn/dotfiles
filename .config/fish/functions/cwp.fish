@@ -4,9 +4,12 @@ function cwp
     wal -i $wallpaper > /dev/null 2>&1
     killall swaybg > /dev/null 2>&1
     killall swaync > /dev/null 2>&1
-    hyprctl hyprpaper unload all > /dev/null 2>&1
-    hyprctl hyprpaper preload "/home/utmkn/Pictures/Wallpapers/$wallpaper" > /dev/null 2>&1
-    hyprctl hyprpaper wallpaper "HDMI-A-1, /home/utmkn/Pictures/Wallpapers/$wallpaper" > /dev/null 2>&1
+    # hyprctl hyprpaper unload all > /dev/null 2>&1
+    # hyprctl hyprpaper preload "/home/utmkn/Pictures/Wallpapers/$wallpaper" > /dev/null 2>&1
+    # hyprctl hyprpaper wallpaper "HDMI-A-1, /home/utmkn/Pictures/Wallpapers/$wallpaper" > /dev/null 2>&1
+    swaybg -i "/home/utmkn/Pictures/Wallpapers/$wallpaper" > /dev/null 2>&1 &
+    disown
     sh ~/.config/waybar/launch.sh > /dev/null 2>&1
     swaync > /dev/null 2>&1 &
+    disown
 end

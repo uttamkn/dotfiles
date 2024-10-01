@@ -134,14 +134,14 @@ alias efrc='vim ~/.config/fish/config.fish'
 alias ehypr='vim ~/.config/hypr/hyprland.conf'
 
 ## git
-alias gs 'git status'
-alias ga 'git add'
+alias gs='git status'
+alias ga='git add'
 # gc and gp are defined above #
 
+alias j='z'
+
 #Autojump
-if test -s /home/utmkn/.autojump/etc/profile.d/autojump.fish
-    source /home/utmkn/.autojump/etc/profile.d/autojump.fish
-end
+zoxide init fish | source
 
 # fastfetch on start looks cool
 # fastfetch
