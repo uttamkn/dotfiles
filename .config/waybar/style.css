@@ -165,7 +165,6 @@ window#waybar.empty #window {
 #battery.charging,
 #battery.plugged {
   color: @textcolor2;
-  background-color: @backgroundlight;
 }
 
 @keyframes blink {
