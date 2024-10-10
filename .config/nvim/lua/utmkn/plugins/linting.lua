@@ -4,12 +4,14 @@ return {
 	config = function()
 		local lint = require("lint")
 
+		local is_pyline_installed = vim.fn.executable("pylint") == 1
+
 		lint.linters_by_ft = {
 			javascript = { "eslint_d", "eslint" },
 			typescript = { "eslint_d", "eslint" },
 			javascriptreact = { "eslint_d", "eslint" },
 			typescriptreact = { "eslint_d", "eslint" },
-			python = { "pylint" },
+			python = is_pyline_installed and { "pylint" } or {},
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
