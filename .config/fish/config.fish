@@ -119,6 +119,8 @@ alias icat='kitten icat'
 alias cat='bat'
 alias im='imv-wayland'
 alias clean='sudo pacman -Rns $(pacman -Qtdq)'
+alias rmn='rm -rf node_modules/'
+alias rmv='rm -rf .venv/'
 
 ## fuzzy finder
 alias fp='zathura --fork (fzf --query ".pdf")'
