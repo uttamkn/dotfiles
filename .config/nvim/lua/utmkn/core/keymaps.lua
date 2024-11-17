@@ -2,6 +2,9 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+-- random shit
+keymap.set("n", ",", "<C-r>", { desc = "Redo" })
+
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
