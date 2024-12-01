@@ -1,4 +1,4 @@
-@import '../../.cache/wal/colors-waybar.css';
+@import "../../.cache/wal/colors-waybar.css";
 
 @define-color backgroundlight @foreground;
 @define-color backgrounddark @background;
@@ -15,16 +15,18 @@
  * ----------------------------------------------------- */
 
 * {
-    font-family: "Fira Sans semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    border: none;
-    border-radius: 0px;
+  font-family: "Fira Sans semibold", FontAwesome, Roboto, Helvetica, Arial,
+    sans-serif;
+  border: none;
+  border-radius: 0px;
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0);
-    border-bottom: 0px solid #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+  background-color: @background;
+  border-bottom: 0px solid #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  margin: 0px;
 }
 
 /* -----------------------------------------------------
@@ -32,59 +34,55 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #workspaces {
-    margin: 5px 1px 6px 1px;
-    padding: 0px 1px;
-    border-radius: 15px;
-    border: 0px;
-    font-weight: bold;
-    font-style: normal;
-    opacity: 0.8;
-    font-size: 14px;
-    color: @textcolor1;
+  border-radius: 15px;
+  border: 0px;
+  font-weight: bold;
+  font-style: normal;
+  opacity: 0.8;
+  font-size: 12px;
+  color: @textcolor1;
 }
 
 #workspaces button {
-    padding-top: 5px;
-    margin: 4px 3px;
-    border-radius: 20px;
-    border: 0px;
-    color: @textcolor1;
-    background-color: @workspacesbackground2;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.4;
+  margin: 0px 3px;
+  border-radius: 20px;
+  border: 0px;
+  color: @textcolor1;
+  background-color: @workspacesbackground2;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.4;
 }
 
 #workspaces button.active {
-    color: @textcolor1;
-    background: @workspacesbackground2;
-    border-radius: 30px;
-    min-width: 30px;
-    transition: all 0.3s ease-in-out;
-    opacity:1.0;
+  color: @textcolor1;
+  background: @workspacesbackground2;
+  border-radius: 10px;
+  min-width: 10px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
 }
 
 #workspaces button:hover {
-    color: @textcolor1;
-    background: @workspacesbackground2;
-    border-radius: 15px;
-    opacity:0.7;
+  color: @textcolor1;
+  background: @workspacesbackground2;
+  border-radius: 15px;
+  opacity: 0.7;
 }
-
 
 /* -----------------------------------------------------
  * Window
  * ----------------------------------------------------- */
 
 #window {
-    margin: 0px 10px 0px 0px;
-    border-radius: 12px;
-    color:@textcolor;
-    font-size:14px;
-    font-weight:normal;
+  margin: 0px 10px 0px 0px;
+  border-radius: 12px;
+  color: @textcolor;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 window#waybar.empty #window {
-    background-color:transparent;
+  background-color: transparent;
 }
 
 /* -----------------------------------------------------
@@ -92,36 +90,36 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 /* -----------------------------------------------------
  * Custom Quicklinks
  * ----------------------------------------------------- */
 
-#custom-calculator, 
+#custom-calculator,
 #custom-hypridle,
 #custom-notification {
-    margin-right: 16px;
-    font-size: 14px;
-    font-weight: bold;
-    color: @textcolor2;
+  margin-right: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: @textcolor2;
 }
 
 #custom-hypridle {
-    margin-right:16px;
+  margin-right: 16px;
 }
 
 #custom-hypridle.active {
-    color: @iconcolor;
+  color: @iconcolor;
 }
 
 #custom-hypridle.notactive {
-    color: #dc2f2f;
+  color: #dc2f2f;
 }
 
 /* -----------------------------------------------------
@@ -129,9 +127,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-appmenuicon {
-    font-size: 24px;
-    color: @textcolor2;
-    margin: 0px 15px 0px 10px;
+  font-size: 24px;
+  color: @textcolor2;
+  margin: 0px 15px 0px 10px;
 }
 
 /* -----------------------------------------------------
@@ -139,21 +137,21 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-    font-size: 14px;
-    color: @textcolor2;
-    border-radius: 15px;
-    margin: 0px 15px 0px 0px;
+  font-size: 14px;
+  color: @textcolor2;
+  border-radius: 15px;
+  margin: 0px 15px 0px 0px;
 }
 
 #custom-updates.green {
 }
 
 #custom-updates.yellow {
-    color: #ff9a3c;
+  color: #ff9a3c;
 }
 
 #custom-updates.red {
-    color: #dc2f2f;
+  color: #dc2f2f;
 }
 
 /* -----------------------------------------------------
@@ -161,9 +159,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-    font-size: 14px;
-    color: @textcolor2;
-    margin: 0px 15px 0px 0px;
+  font-size: 14px;
+  color: @textcolor2;
+  margin: 0px 15px 0px 0px;
 }
 
 /* -----------------------------------------------------
@@ -171,14 +169,14 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-    font-size: 14px;
-    color: @textcolor2;
-    border-radius: 15px;
-    margin: 0px 15px 0px 0px;
+  font-size: 14px;
+  color: @textcolor2;
+  border-radius: 15px;
+  margin: 0px 15px 0px 0px;
 }
 
 #pulseaudio.muted {
-    color: @textcolor3;
+  color: @textcolor3;
 }
 
 /* -----------------------------------------------------
@@ -186,31 +184,31 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-    font-size: 14px;
-    color: @textcolor2;
-    border-radius: 15px;
-    margin: 0px 15px 0px 0px;
+  font-size: 14px;
+  color: @textcolor2;
+  border-radius: 15px;
+  margin: 0px 15px 0px 0px;
 }
 
 #network.wifi {
-    color: @textcolor2;
+  color: @textcolor2;
 }
 
 /* -----------------------------------------------------
  * Bluetooth
  * ----------------------------------------------------- */
 
- #bluetooth, #bluetooth.on, #bluetooth.connected {
-    font-size: 14px;
-    color: @textcolor2;
-    border-radius: 15px;
-    margin: 10px 15px 10px 0px;
+#bluetooth,
+#bluetooth.on,
+#bluetooth.connected {
+  font-size: 14px;
+  color: @textcolor2;
+  border-radius: 15px;
+  margin: 10px 15px 10px 0px;
 }
 
 #bluetooth.off {
-    background-color: transparent;
-    padding: 0px;
-    margin: 0px;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
 }
-
-
