@@ -3,6 +3,7 @@
     "reload_style_on_change": true,
     "layer": "top",
     "margin-top": 0,
+    "position": "bottom",
     "margin-bottom": 0,
     "layer": "top",
     "margin-left": 0,
