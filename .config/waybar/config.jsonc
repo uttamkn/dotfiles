@@ -1,41 +1,37 @@
 {
-    // General Settings
-    "reload_style_on_change": true,
-    "layer": "top",
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "layer": "top",
-    "margin-left": 0,
-    "margin-right": 0,    
-    "spacing": 0,
-
-    // Load Modules
-    "include": [
-        "~/dotfiles-arch/.config/waybar/modules.json"
-    ],
-
-    // Modules Left
-    "modules-left": [
-        "custom/appmenuicon",
-        "wlr/taskbar",
-        "hyprland/window",
-        "custom/empty"
-    ],
-
-    // Modules Center
-    "modules-center": [
-        "hyprland/workspaces"
-    ],
-
-    // Modules Right    
-    "modules-right": [
-	"custom/notification",
-        "custom/updates",
-	"custom/calculator",
-        "pulseaudio",
-        "bluetooth",
-        "network",
-        "clock",
-        "custom/hypridle"
-    ]
+  // General Settings
+  "reload_style_on_change": true,
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "layer": "top",
+  "position": "bottom",
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+  // Load Modules
+  "include": [
+    "~/dotfiles-arch/.config/waybar/modules.json"
+  ],
+  // Modules Left
+  "modules-left": [
+    "custom/appmenuicon",
+    "wlr/taskbar",
+    "hyprland/window",
+    "custom/empty"
+  ],
+  // Modules Center
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  // Modules Right    
+  "modules-right": [
+    "custom/notification",
+    "custom/updates",
+    "custom/calculator",
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "clock",
+    "custom/hypridle"
+  ]
 }
