@@ -11,7 +11,7 @@ return {
 			javascript = { "eslint_d", "eslint" },
 			typescript = is_eslint_installed and { "eslint_d", "eslint" } or {},
 			javascriptreact = { "eslint_d", "eslint" },
-			typescriptreact = { "eslint_d", "eslint" },
+			typescriptreact = is_eslint_installed and { "eslint_d", "eslint" } or {},
 			python = is_pyline_installed and { "pylint" } or {},
 		}
 

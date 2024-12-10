@@ -3,7 +3,6 @@ if test -s /home/utmkn/.config/fish/custom-aliases.fish
 end
 
 export VCPKG_ROOT=~/Downloads/vcpkg
-
 if status is-interactive
   set fish_greeting
 end
