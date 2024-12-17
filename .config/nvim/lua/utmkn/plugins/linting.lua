@@ -5,15 +5,15 @@ return {
 		local lint = require("lint")
 
 		local is_pyline_installed = vim.fn.executable("pylint") == 1
+		local is_eslint_installed = vim.fn.executable("eslint") == 1
 
 		lint.linters_by_ft = {
 			javascript = { "eslint_d", "eslint" },
-			typescript = { "eslint_d", "eslint" },
+			typescript = is_eslint_installed and { "eslint_d", "eslint" } or {},
 			javascriptreact = { "eslint_d", "eslint" },
-			typescriptreact = { "eslint_d", "eslint" },
+			typescriptreact = is_eslint_installed and { "eslint_d", "eslint" } or {},
 			python = is_pyline_installed and { "pylint" } or {},
 		}
-
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
 		-- ignore eslint config file not found error
