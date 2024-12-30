@@ -140,6 +140,7 @@ alias ehypr='vim ~/.config/hypr/hyprland.conf'
 ## git
 alias gs='git status'
 alias ga='git add'
+alias gl='git log --oneline --graph --decorate --parents'
 # gc and gp are defined above #
 
 alias j='z'
