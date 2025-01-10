@@ -130,12 +130,11 @@ alias fd='zaread --fork (fzf --query "notes .docx")'
 alias ff='nohup nvim (fzf) > /dev/null 2>&1 &'
 
 ## editors
-alias vim='nvim'
 alias nv='nvim'
 
 ## config
-alias efrc='vim ~/.config/fish/config.fish'
-alias ehypr='vim ~/.config/hypr/hyprland.conf'
+alias efrc='nvim ~/.config/fish/config.fish'
+alias ehypr='nvim ~/.config/hypr/hyprland.conf'
 
 ## git
 alias gs='git status'
