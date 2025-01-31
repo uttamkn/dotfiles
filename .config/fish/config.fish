@@ -3,6 +3,7 @@ if test -s /home/utmkn/.config/fish/custom-aliases.fish
 end
 
 export VCPKG_ROOT=~/Downloads/vcpkg
+
 if status is-interactive
   set fish_greeting
 end
@@ -115,11 +116,13 @@ alias ls='lsd -Fl'
 alias la='lsd -Fla'
 alias cls='clear'
 alias vate='source .venv/bin/activate.fish'
-alias c='zeditor'
 alias icat='kitten icat'
 alias cat='bat'
 alias im='imv-wayland'
 alias clean='sudo pacman -Rns $(pacman -Qtdq)'
+alias rmn='rm -rf node_modules/'
+alias rmv='rm -rf .venv/'
+alias slp='systemctl suspend'
 
 ## fuzzy finder
 alias fp='zathura --fork (fzf --query ".pdf")'
@@ -127,27 +130,23 @@ alias fd='zaread --fork (fzf --query "notes .docx")'
 alias ff='nohup nvim (fzf) > /dev/null 2>&1 &'
 
 ## editors
-alias vim='nvim'
 alias nv='nvim'
 
 ## config
-alias efrc='vim ~/.config/fish/config.fish'
-alias ehypr='vim ~/.config/hypr/hyprland.conf'
+alias efrc='nvim ~/.config/fish/config.fish'
+alias ehypr='nvim ~/.config/hypr/hyprland.conf'
 
 ## git
-alias gs 'git status'
-alias ga 'git add'
+alias gs='git status'
+alias ga='git add'
+alias gl='git log --oneline --graph --decorate --parents'
 # gc and gp are defined above #
 
-alias j 'z'
+alias j='z'
 
+#Autojump
 zoxide init fish | source
 
 # fastfetch on start looks cool
 # fastfetch
 # echo " "
-
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
