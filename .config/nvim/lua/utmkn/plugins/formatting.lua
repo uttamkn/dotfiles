@@ -45,5 +45,11 @@ return {
 				range = range,
 			})
 		end, { range = true, desc = "Format file or range (in visual mode)" })
+		vim.keymap.set(
+			"n",
+			"<leader>o",
+			":Format<CR>:w<CR>",
+			{ noremap = true, silent = true, desc = "Format file and save" }
+		)
 	end,
 }
