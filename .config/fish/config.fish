@@ -151,3 +151,6 @@ zoxide init fish | source
 # fastfetch
 # echo " "
 
+
+# Created by `pipx` on 2025-02-22 16:06:56
+set PATH $PATH /home/utmkn/.local/bin
