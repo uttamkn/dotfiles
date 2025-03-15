@@ -131,6 +131,7 @@ alias ff='nohup nvim (fzf) > /dev/null 2>&1 &'
 
 ## editors
 alias nv='nvim'
+alias c='windsurf'
 
 ## config
 alias efrc='nvim ~/.config/fish/config.fish'
@@ -146,6 +147,10 @@ alias j='z'
 
 #Autojump
 zoxide init fish | source
+
+# go setup
+set -x GOPATH $HOME/go
+set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
 
 # fastfetch on start looks cool
 # fastfetch
