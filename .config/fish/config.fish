@@ -151,6 +151,7 @@ zoxide init fish | source
 # go setup
 set -x GOPATH $HOME/go
 set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
+set -Ux DOCKER_BUILDKIT 1
 
 # fastfetch on start looks cool
 # fastfetch
