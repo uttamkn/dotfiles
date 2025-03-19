@@ -8,7 +8,7 @@ return {
 		local is_eslint_installed = vim.fn.executable("eslint") == 1
 
 		lint.linters_by_ft = {
-			javascript = { "eslint_d", "eslint" },
+      javascript = is_eslint_installed and { "eslint_d", "eslint" } or {},
 			typescript = is_eslint_installed and { "eslint_d", "eslint" } or {},
 			javascriptreact = { "eslint_d", "eslint" },
 			typescriptreact = is_eslint_installed and { "eslint_d", "eslint" } or {},
