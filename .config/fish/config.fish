@@ -155,3 +155,7 @@ zoxide init fish | source
 
 # Created by `pipx` on 2025-02-22 16:06:56
 set PATH $PATH /home/utmkn/.local/bin
+
+# Go environment variables
+set -x GOPATH $HOME/Downloads/go
+set -x PATH $PATH $GOPATH/bin /usr/local/go/bin
