@@ -156,3 +156,6 @@ set -Ux DOCKER_BUILDKIT 1
 # fastfetch on start looks cool
 # fastfetch
 # echo " "
+
+# Created by `pipx` on 2025-03-27 11:17:26
+set PATH $PATH /home/utmkn/.local/bin
