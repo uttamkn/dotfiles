@@ -1,34 +1,70 @@
 @import "~/.cache/wal/colors-rofi-dark"
 
 * {
-  font:"Fira Code 12";
+  font: "Fira Code 12";
+}
+
+window {
+  transparency: "real";
+  border-radius: 12px;
+  padding: 10px;
+  background-color: rgba(10, 10, 10, 0.35); // fallback if blur fails
+}
+
+configuration {
+  modi: "drun";
+  show-icons: true;
+  display-drun: "->";
+  drun-display-format: "{icon}  {name}";
+}
+
+listview {
+  columns: 1;
+  lines: 8;
+  fixed-height: true;
+  fixed-columns: true;
+  cycle: false;
+  spacing: 6px;
+  padding: 8px;
+  border: 0px;
+  scrollbar: false;
+}
+
+element {
+  padding: 6px;
+  border-radius: 8px;
 }
 
 element-text {
-background-color: inherit;
-text-color: inherit;
+  vertical-align: 0.5;
 }
 
-window { 
-transparency: "real";
-border-radius: 10px;
+element selected {
+  background-color: @selected-normal-background;
+  text-color: @selected-normal-foreground;
+  border-radius: 8px;
 }
 
-
-configuration {
-    modi: "drun";
-    show-icons: true;
-    display-drun: "Q";
+entry {
+  border-radius: 8px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.3); // slightly lighter entry
+  text-color: @foreground;
+  placeholder: "Type to search...";
+  vertical-align: 0.5;
 }
 
-
-listview {
-    columns: 1;
-    lines: 7;
-    fixed-height: true;
-    fixed-columns: true;
-    cycle: false;
-    scrollbar: false;
-    border: 0px solid;
+prompt {
+  text-color: @foreground;
+  font: "Fira Code 12";
+  padding: 8px;
+  vertical-align: 0.5;
 }
 
+textbox-prompt-colon {
+  expand: false;
+  str: "";
+  margin: 0px 0.3em 0em 0em;
+  text-color: @normal-foreground;
+  vertical-align: 0.5;
+}
