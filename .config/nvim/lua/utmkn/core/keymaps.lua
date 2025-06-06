@@ -39,3 +39,6 @@ keymap.set("n", "<leader>yy", '"+yy', { desc = "Copy to clipboard" })
 
 -- Paste from clipboard
 keymap.set("n", "<leader>p", '"+p', { desc = "Paste from clipboard" })
+
+-- Format and save
+keymap.set("n", "<leader>o", "<cmd>Format<CR><cmd>write<CR>", { desc = "Format and save" })

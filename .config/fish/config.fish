@@ -159,3 +159,9 @@ set -Ux DOCKER_BUILDKIT 1
 
 # Created by `pipx` on 2025-03-27 11:17:26
 set PATH $PATH /home/utmkn/.local/bin
+
+# pyvenv
+set -gx PYENV_ROOT $HOME/.pyenv
+set -gx PATH $PYENV_ROOT/bin $PATH
+status --is-interactive; and pyenv init - | source
+status --is-interactive; and pyenv virtualenv-init - | source
