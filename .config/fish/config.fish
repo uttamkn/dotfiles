@@ -125,7 +125,7 @@ alias rmv='rm -rf .venv/'
 alias slp='systemctl suspend'
 
 ## fuzzy finder
-alias fdoc='fd -i -e pdf -e doc -e docx --type f | fzf --preview "pdftotext {} - 2>/dev/null | head -40" --bind "enter:execute(zathura {})"'
+alias fdoc='fd -i -e pdf -e doc -e docx --type f | fzf --preview "pdftotext {} - 2>/dev/null | head -40" --bind "enter:execute(zaread {})"'
 alias fnv='fd --type f | fzf --preview "bat --style=numbers --color=always {} || cat {}" --bind "enter:execute(nvim {})"'
 alias cdf='cd "$(fd --type d | fzf)"'
 
