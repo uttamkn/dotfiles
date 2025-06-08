@@ -7,10 +7,6 @@ return {
 		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
-
-		local mason_lspconfig = require("mason-lspconfig")
-
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		local keymap = vim.keymap
@@ -66,50 +62,56 @@ return {
 		-- do this if mason-lspconfig doesn't support any language server
 		-- lspconfig.ts_ls.setup({})
 
-		mason_lspconfig.setup({
-			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
-			end,
-			["emmet_ls"] = function()
-				-- configure emmet language server
-				lspconfig["emmet_ls"].setup({
-					capabilities = capabilities,
-					filetypes = {
-						"html",
-						"typescriptreact",
-						"javascriptreact",
-						"css",
-					},
-				})
-			end,
-			["lua_ls"] = function()
-				lspconfig["lua_ls"].setup({ capabilities = capabilities, settings = {
-						Lua = {
-							diagnostics = {
-								globals = { "vim" },
-							},
-							completion = {
-								callSnippet = "Replace",
+		require("mason-lspconfig").setup({
+			handlers = {
+				-- Default handler
+				function(server_name)
+					require("lspconfig")[server_name].setup({
+						capabilities = capabilities,
+					})
+				end,
+
+				-- Custom handler for lua_ls
+				lua_ls = function()
+					require("lspconfig").lua_ls.setup({
+						capabilities = capabilities,
+						settings = {
+							Lua = {
+								runtime = { version = "LuaJIT" },
+								diagnostics = { globals = { "vim", "use" } },
+								workspace = {
+									library = vim.api.nvim_get_runtime_file("", true),
+									checkThirdParty = false,
+								},
+								telemetry = { enable = false },
 							},
 						},
-					},
-				})
-			end,
-			["pyright"] = function()
-				lspconfig["pyright"].setup({
-					capabilities = capabilities,
-					settings = {
-						python = {
-							analysis = {
-								autoSearchPaths = true,
-								useLibraryCodeForTypes = true,
+					})
+				end,
+
+				-- Custom for emmet_ls
+				emmet_ls = function()
+					require("lspconfig").emmet_ls.setup({
+						capabilities = capabilities,
+						filetypes = { "html", "typescriptreact", "javascriptreact", "css" },
+					})
+				end,
+
+				-- Custom for pyright
+				pyright = function()
+					require("lspconfig").pyright.setup({
+						capabilities = capabilities,
+						settings = {
+							python = {
+								analysis = {
+									autoSearchPaths = true,
+									useLibraryCodeForTypes = true,
+								},
 							},
 						},
-					},
-				})
-			end,
+					})
+				end,
+			},
 		})
 	end,
 }

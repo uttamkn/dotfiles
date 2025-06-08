@@ -42,7 +42,7 @@ return {
 				"clang-format",
 				"google-java-format",
 				"stylua",
-        "ruff",
+				"ruff",
 				"eslint_d",
 			},
 		})
