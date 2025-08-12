@@ -141,7 +141,7 @@ alias ehypr='nvim ~/.config/hypr/hyprland.conf'
 alias gs='git status'
 alias ga='git add'
 alias gl='git log --oneline --graph --decorate --parents'
-# gc and gp are defined above #
+# gc and gp are defined in functions
 
 alias j='z'
 
