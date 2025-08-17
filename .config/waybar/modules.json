@@ -54,7 +54,7 @@
     "format": "   {}",
     "escape": true,
     "return-type": "json",
-    "exec": "sh ~/dotfiles-arch/.config/waybar/updates.sh",
+    "exec": "sh ~/.config/waybar/updates.sh",
     "restart-interval": 60
   },
 
@@ -129,20 +129,6 @@
     "interval": 30,
     "on-click": "blueman-manager",
     "format-no-controller": ""
-  },
-  "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon}   {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "format-alt": "{icon}  {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "]
   },
   // Swaync
   "custom/notification": {
