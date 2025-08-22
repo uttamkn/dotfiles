@@ -1,0 +1,8 @@
+[Unit]
+Description=Auto Connect Bluetooth Headphones
+
+[Service]
+ExecStart=/usr/bin/bluetoothctl connect 14:3F:A6:FA:EA:1A
+
+[Install]
+WantedBy=default.target
