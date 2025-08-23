@@ -12,7 +12,7 @@
 
     // Load Modules
     "include": [
-        "~/dotfiles-arch/.config/waybar/modules.json"
+        "~/.config/waybar/modules.json"
     ],
 
     // Modules Left

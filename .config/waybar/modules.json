@@ -54,7 +54,7 @@
     "format": "   {}",
     "escape": true,
     "return-type": "json",
-    "exec": "sh ~/dotfiles-arch/.config/waybar/updates.sh",
+    "exec": "sh ~/.config/waybar/updates.sh",
     "restart-interval": 60
   },
 
@@ -78,8 +78,8 @@
     "escape": true,
     "exec-on-event": true,
     "interval": 60,
-    "exec": "sh ~/dotfiles-arch/.config/waybar/hypridle.sh status",
-    "on-click": "sh ~/dotfiles-arch/.config/waybar/hypridle.sh toggle",
+    "exec": "sh ~/.config/waybar/hypridle.sh status",
+    "on-click": "sh ~/.config/waybar/hypridle.sh toggle",
     "on-click-right": "hyprlock"
   },
 
