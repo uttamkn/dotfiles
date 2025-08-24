@@ -89,14 +89,6 @@ return {
 					})
 				end,
 
-				-- Custom for emmet_ls
-				emmet_ls = function()
-					require("lspconfig").emmet_ls.setup({
-						capabilities = capabilities,
-						filetypes = { "html", "typescriptreact", "javascriptreact", "css" },
-					})
-				end,
-
 				-- Custom for pyright
 				pyright = function()
 					require("lspconfig").pyright.setup({
@@ -111,6 +103,14 @@ return {
 						},
 					})
 				end,
+
+				-- Custom for emmet_ls
+				-- emmet_ls = function()
+				-- 	require("lspconfig").emmet_ls.setup({
+				-- 		capabilities = capabilities,
+				-- 		filetypes = { "html", "typescriptreact", "javascriptreact", "css" },
+				-- 	})
+				-- end,
 			},
 		})
 	end,

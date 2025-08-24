@@ -1,33 +1,23 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	event = { "BufReadPre", "BufNewFile" },
+	branch = "master",
+	lazy = false,
 	build = ":TSUpdate",
+	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"windwp/nvim-ts-autotag",
 	},
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
 
-		treesitter.setup({ -- enable syntax highlighting
-			highlight = {
-				enable = true,
-			},
-			-- enable indentation
-			indent = { enable = true },
-			-- enable autotagging (w/ nvim-ts-autotag plugin)
-			autotag = {
-				enable = true,
-			},
-			-- ensure these language parsers are installed (it will be installed automatically)
+		treesitter.setup({
 			ensure_installed = {
+				"c",
+				"cpp",
+				"python",
+				"go",
 				"json",
-				"javascript",
-				"typescript",
-				"tsx",
 				"yaml",
-				"html",
-				"css",
-				"prisma",
 				"markdown",
 				"markdown_inline",
 				"bash",
@@ -37,14 +27,24 @@ return {
 				"gitignore",
 				"query",
 				"vimdoc",
-				"c",
-				"cpp",
 				"fish",
 			},
 			auto_install = true,
 			sync_install = false,
-			ignore_install = {},
-			modules = {},
+			highlight = {
+				enable = true,
+			},
+			indent = { enable = true },
+			autotag = {
+				enable = true,
+			},
+			disable = function(_, buf) -- Disable for files larger than 100 KB
+				local max_filesize = 100 * 1024 -- 100 KB
+				local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+				if ok and stats and stats.size > max_filesize then
+					return true
+				end
+			end,
 			incremental_selection = {
 				enable = true,
 				keymaps = {
