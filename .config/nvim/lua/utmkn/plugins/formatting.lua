@@ -11,20 +11,20 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescriptreact = { "prettier" },
-				css = { "prettier" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
+				python = { "ruff_format" },
+				lua = { "stylua" },
 				html = { "prettier" },
 				json = { "prettier" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
-				cpp = { "clang-format" },
-				c = { "clang-format" },
-				lua = { "stylua" },
-        python = {"ruff_format"},
-				rust = { "rustfmt" },
+				-- javascript = { "prettier" },
+				-- typescript = { "prettier" },
+				-- javascriptreact = { "prettier" },
+				-- typescriptreact = { "prettier" },
+				-- css = { "prettier" },
+				-- rust = { "rustfmt" },
 			},
 		})
 

@@ -22,18 +22,18 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
-				"ts_ls",
 				"clangd",
-				-- "jdtls",
-				"html",
 				"gopls",
-				"cssls",
-				"tailwindcss",
-				"lua_ls",
-				-- "rust_analyzer",
-				"emmet_ls",
-				-- "prismals",
 				"pyright",
+				"html",
+				"lua_ls",
+				-- "ts_ls",
+				-- "cssls",
+				-- "tailwindcss",
+				-- "rust_analyzer",
+				-- "emmet_ls",
+				-- "prismals",
+				-- "jdtls",
 			},
 		})
 
@@ -41,12 +41,12 @@ return {
 			ensure_installed = {
 				"prettier",
 				"clang-format",
-				-- "google-java-format",
 				"stylua",
 				"gofumpt",
 				"goimports-reviser",
 				"ruff",
-				"eslint_d",
+				-- "google-java-format",
+				-- "eslint_d",
 			},
 		})
 	end,

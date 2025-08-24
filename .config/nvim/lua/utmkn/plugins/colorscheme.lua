@@ -2,6 +2,7 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
+		priority = 1000,
 		opts = {
 			transparent_mode = true,
 			styles = {
@@ -43,32 +44,6 @@ return {
 			vim.cmd("colorscheme tokyonight")
 
 			-- Set the background to transparent
-			-- local hl_groups = {
-			-- 	"Normal",
-			-- 	"NormalNC",
-			-- 	"NonText",
-			-- 	"LineNr",
-			-- 	"SignColumn",
-			-- 	"VertSplit",
-			-- 	"NvimTreeNormal",
-			-- 	"NvimCmpNormal",
-			-- 	"NvimTreeNormalNC",
-			-- 	"TelescopeNormal",
-			-- 	"TelescopeBorder",
-			-- 	"TelescopePromptNormal",
-			-- 	"TelescopePromptBorder",
-			-- 	"TelescopeResultsNormal",
-			-- 	"TelescopeResultsBorder",
-			-- 	"TelescopePreviewNormal",
-			-- 	"Pmenu",
-			-- 	"PmenuSel",
-			-- 	"PmenuSbar",
-			-- 	"PmenuThumb",
-			-- }
-			-- for _, group in ipairs(hl_groups) do
-			-- 	vim.api.nvim_set_hl(0, group, { bg = "NONE" })
-			-- end
-
 			local hl_groups = vim.api.nvim_get_hl(0, {})
 			for group_name, _ in pairs(hl_groups) do
 				if

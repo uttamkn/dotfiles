@@ -11,10 +11,10 @@ return {
 			violet = "#957FB8",
 			yellow = "#E6C384",
 			red = "#E82424",
-			fg = "#DCD7BA",         -- Default foreground
-			bg = "#1F1F28",         -- Main background
-			inactive_bg = "#2A2A37",-- Darker background for inactive statuslines
-			inactive_fg = "#727169" -- Lighter gray for inactive text
+			fg = "#DCD7BA", -- Default foreground
+			bg = "#1F1F28", -- Main background
+			inactive_bg = "#2A2A37", -- Darker background for inactive statuslines
+			inactive_fg = "#727169", -- Lighter gray for inactive text
 		}
 
 		local my_lualine_theme = {
@@ -60,7 +60,7 @@ return {
 					{
 						lazy_status.updates,
 						cond = lazy_status.has_updates,
-						color = { fg = "#FF9E64" },  -- Peach color for updates indicator
+						color = { fg = "#FF9E64" }, -- Peach color for updates indicator
 					},
 					{ "encoding" },
 					{ "fileformat" },
