@@ -18,5 +18,14 @@ return {
 			close_on_exit = true,
 			shell = vim.o.shell,
 		})
+
+		-- Custom keymaps to execute commands in terminal mode
+		local keymap = vim.keymap
+		keymap.set(
+			"n",
+			"<leader>tr",
+			"<cmd>TermExec cmd='g++ solution.cpp && ./a.out && rm a.out'<cr>",
+			{ desc = "Run solution.cpp file" }
+		)
 	end,
 }
