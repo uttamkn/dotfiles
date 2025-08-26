@@ -2,7 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export DOCKER_BUILDKIT:1
 SETUVAR --export EDITOR:nvim
-SETUVAR --export --path PATH:/home/utmkn/\x2elocal/share/nvm/v22\x2e18\x2e0/bin\x1e/home/utmkn/\x2elocal/share/nvim/mason/bin\x1e/usr/share/pyenv/plugins/pyenv\x2dvirtualenv/shims\x1e/home/utmkn/\x2epyenv/shims\x1e/home/utmkn/\x2epyenv/bin\x1e/home/utmkn/\x2elocal/share/nvm/v22\x2e18\x2e0/bin\x1e/home/utmkn/\x2epyenv/bin\x1e/home/utmkn/\x2epyenv/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/sbin\x1e/usr/bin\x1e/sbin\x1e/bin\x1e/usr/local/go/bin\x1e/home/utmkn/go/bin\x1e/home/utmkn/\x2elocal/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/usr/local/go/bin\x1e/home/utmkn/go/bin\x1e/home/utmkn/\x2elocal/bin\x1e/usr/local/go/bin\x1e/home/utmkn/go/bin\x1e/home/utmkn/\x2elocal/bin
+SETUVAR --export --path PATH:/home/utmkn/\x2elocal/share/nvm/v22\x2e18\x2e0/bin\x1e/home/utmkn/\x2elocal/share/nvm/v22\x2e18\x2e0/bin\x1e/home/utmkn/\x2epyenv/bin\x1e/home/utmkn/\x2epyenv/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/sbin\x1e/usr/bin\x1e/sbin\x1e/bin\x1e/usr/local/go/bin\x1e/home/utmkn/go/bin\x1e/home/utmkn/\x2elocal/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/usr/local/go/bin\x1e/home/utmkn/go/bin\x1e/home/utmkn/\x2elocal/bin
 SETUVAR __fish_initialized:3800
 SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
