@@ -40,7 +40,7 @@ return {
 
 		-- Set menu
 		dashboard.section.buttons.val = {
-			dashboard.button("SPC wr", "󰁯  > Get back where you left off", "<cmd>SessionRestore<CR>"),
+			dashboard.button("SPC wr", "󰁯  > Get back where you left off", "<cmd>AutoSession restore<CR>"),
 			dashboard.button("q", "  > Quit", "<cmd>qa<CR>"),
 		}
 

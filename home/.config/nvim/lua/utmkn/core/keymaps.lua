@@ -33,6 +33,12 @@ keymap.set("t", "<C-k>", "<C-\\><C-n><C-W>k", { desc = "up" })
 keymap.set("t", "<C-h>", "<C-\\><C-n><C-W>h", { desc = "left" })
 keymap.set("t", "<C-l>", "<C-\\><C-n><C-W>l", { desc = "right" })
 
+-- lsp
+keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Global rename" })
+keymap.set("n", "gr", vim.lsp.buf.references, { desc = "List references" })
+keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+
 -- Copy to clipboard
 keymap.set("v", "<leader>y", '"+y', { desc = "Copy to clipboard" })
 keymap.set("n", "<leader>yy", '"+yy', { desc = "Copy to clipboard" })

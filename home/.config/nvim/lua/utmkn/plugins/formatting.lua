@@ -14,17 +14,12 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				python = { "ruff_format" },
+				go = { "gofumpt" },
 				lua = { "stylua" },
 				html = { "prettier" },
 				json = { "prettier" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
-				-- javascript = { "prettier" },
-				-- typescript = { "prettier" },
-				-- javascriptreact = { "prettier" },
-				-- typescriptreact = { "prettier" },
-				-- css = { "prettier" },
-				-- rust = { "rustfmt" },
 			},
 		})
 
