@@ -165,3 +165,14 @@ set -gx PYENV_ROOT $HOME/.pyenv
 set -gx PATH $PYENV_ROOT/bin $PATH
 status --is-interactive; and pyenv init - | source
 status --is-interactive; and pyenv virtualenv-init - | source
+
+# yazi
+set -x EDITOR "nvim"
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
