@@ -1,5 +1,3 @@
-set -Ux PATH /home/utmkn/.local/share/nvm/v22.18.0/bin $PATH
-
 if test -s /home/utmkn/.config/fish/custom-aliases.fish
    source /home/utmkn/.config/fish/custom-aliases.fish
 end

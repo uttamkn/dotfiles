@@ -25,9 +25,14 @@ return {
 		},
 	},
 	opts = {
-		open_for_directories = false,
+		-- This will open yazi by default when you open a directory from any file explorer
+		open_for_directories = true,
 		keymaps = {
 			show_help = "<f1>",
 		},
+		init = function()
+			-- mark netrw as loaded so it's not loaded at all.
+			vim.g.loaded_netrwPlugin = 1
+		end,
 	},
 }
