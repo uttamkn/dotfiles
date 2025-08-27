@@ -38,3 +38,5 @@ set.backspace = "indent,eol,start"
 --split windows
 set.splitright = true
 set.splitbelow = true
+
+set.winborder = "rounded"
