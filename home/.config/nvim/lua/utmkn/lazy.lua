@@ -18,6 +18,9 @@ require("lazy").setup({
 	spec = {
 		{ import = "utmkn.plugins" },
 	},
+	dev = {
+		path = "~/Projects/nvim-plugins",
+	},
 	checker = {
 		enabled = true,
 		notify = false,
