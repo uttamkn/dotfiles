@@ -1,3 +1,3 @@
-![image](https://github.com/user-attachments/assets/d5b57ca3-9441-476e-9abe-4ee24d66f329)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2680d15d-d4d5-47bf-b81c-7a53c68addf1" />
 
 # stow -t ~ home
