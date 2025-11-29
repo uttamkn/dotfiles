@@ -4,8 +4,11 @@ local keymap = vim.keymap
 
 -- lua dev
 keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
-keymap.set("n", "<leader>l", ":.lua<CR>")
+-- keymap.set("n", "<leader>l", ":.lua<CR>")
 keymap.set("v", "<leader>l", ":lua<CR>")
+
+-- python dev
+keymap.set("n", "<leader>l", ":w<CR>:!python3 %<CR>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
