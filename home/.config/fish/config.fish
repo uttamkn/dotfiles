@@ -176,3 +176,8 @@ function y
 	end
 	rm -f -- "$tmp"
 end
+
+# Hadoop
+set -x HADOOP_HOME $HOME/hadoop
+set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
+set -x PATH $HADOOP_HOME/bin $PATH
