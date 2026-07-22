@@ -181,3 +181,6 @@ end
 set -x HADOOP_HOME $HOME/hadoop
 set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
 set -x PATH $HADOOP_HOME/bin $PATH
+
+# kimi-code
+fish_add_path -g "/home/utmkn/.kimi-code/bin"

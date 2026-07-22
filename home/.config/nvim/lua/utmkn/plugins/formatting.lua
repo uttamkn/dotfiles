@@ -14,7 +14,7 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				python = { "ruff_format" },
-				go = { "gofumpt" },
+				go = { "gofmt" },
 				lua = { "stylua" },
 				html = { "prettier" },
 				json = { "prettier" },

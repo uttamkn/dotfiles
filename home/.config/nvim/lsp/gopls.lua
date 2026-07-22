@@ -6,6 +6,9 @@ return {
 		gopls = {
 			usePlaceholders = true,
 			staticcheck = true,
+			analyses = {
+				ST1000 = false,
+			},
 			codelenses = {
 				test = true,
 			},
