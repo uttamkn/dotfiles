@@ -1,4 +1,22 @@
 {
+  "git_panel": {
+    "sort_by": "name",
+    "group_by": "staging",
+    "tree_view": true
+  },
+  "icon_theme": "Zed (Default)",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "base_keymap": "VSCode",
+  "agent_servers": {
+    "codex-acp": {
+      "default_config_options": {
+        "model": "gpt-5.6-sol"
+      },
+      "type": "registry"
+    }
+  },
   "features": {
     "inline_completion_provider": "copilot"
   },
@@ -10,9 +28,9 @@
   "buffer_font_size": 16,
   "restore_on_startup": "last_session",
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Tokyo Night",
-    "dark": "One Dark"
+    "dark": "Tokyo Night"
   },
   "tabs": {
     "close_position": "right",
